@@ -157,6 +157,7 @@ public class GoatsController : ControllerBase
     /// <param name="creditCard"></param>
     /// <returns>Customer object</returns>    
     [HttpPost("/addcreditcard")]
+    [Authorize]
     public IActionResult AddCreditCard([FromBody] CreditCard creditCard)
     {
         _logger.LogInformation("AddCreditCard called");
